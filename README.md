@@ -30,38 +30,31 @@ This project enables decision-makers in financial institutions to:
 5. Optimize strategies for marketing, risk management, and loan recovery
 
 ### Business Questions
-🔹 Loan Performance
+ Loan Performance
 1. What is the total loan amount disbursed, repaid, and outstanding?
    
 2. What percentage of loans are active, defaulted, or fully paid?
 
 3. How does loan performance differ across regions and branches?
 
-🔹 Customer Demographics
+ Customer Demographics
 1. What is the distribution of borrowers by age, gender, and employment status?
 
 2. How does income level relate to loan performance and default rates?
 
 3. Are certain age groups more likely to default?
 
-🔹 Branch-Level Insights
+ Branch-Level Insights
 1. Which branches have the highest outstanding balances or default rates?
 
 2. How do average interest rates vary across branches or regions?
 
-🔹 Loan Segmentation
+ Loan Segmentation
 1. What characteristics (age, income, employment status) are associated with:
 
    Fully repaid loans?
 
    Defaulted loans?
-
-2. Can we identify clusters of high-risk vs low-risk customers?
-
-🔹 Predictive Metrics
-1. Can we engineer features like payment behavior or risk level?
-
-2. Which customer profiles are likely to need intervention or support?
 
 
 

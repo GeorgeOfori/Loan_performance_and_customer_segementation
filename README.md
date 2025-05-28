@@ -1,124 +1,67 @@
-
-## PROJECT OVERVIEW
-
-
-### Project Title:
+# Project Overview
+ ### Project Title:
 Loan Performance & Customer Segmentation Dashboard
 
 ### Objective:
-To analyze loan performance metrics across branches and customer demographics, and to identify actionable customer segments for better risk profiling and product targeting.
+To analyze loan performance metrics across branches and customer demographics, and to identify actionable customer segments for improved risk profiling and targeted product strategies.
 
 ### Goals:
-Understand the health of the loan portfolio
+1. Assess the health of the loan portfolio
 
-Evaluate repayment behavior and outstanding balances
+2. Evaluate repayment behavior and outstanding balances
 
-Analyze loan performance by region, branch, and customer demographics
+3. Analyze loan performance by region, branch, and customer attributes
 
-Identify patterns in defaulted or underperforming loans
+4. Identify patterns in defaulted or underperforming loans
 
-Segment customers based on income, age, and employment status for marketing and risk profiling
+5. Segment customers based on income, age, and employment status for marketing and risk analysis
 
 ### Business Value:
-This project empowers decision-makers in a financial institution to:
+This project enables decision-makers in financial institutions to:
 
-Improve loan product offerings
+1. Enhance loan product offerings based on performance trends
 
-Target profitable customer segments
+2. Target high-value and low-risk customer segments
 
-Detect risky borrowers early
+3. Detect risky borrowers early for preventive actions
 
-Monitor performance by branch, region, and customer type
+4. Monitor branch- and region-level performance efficiently
 
-Optimize marketing, risk, and recovery strategies
+5. Optimize strategies for marketing, risk management, and loan recovery
 
+### Business Questions
+🔹 Loan Performance
+1. What is the total loan amount disbursed, repaid, and outstanding?
+   
+2. What percentage of loans are active, defaulted, or fully paid?
 
-## BUSINESS QUESTIONS
-1. Loan Performance
+3. How does loan performance differ across regions and branches?
 
-What is the total loan disbursed, repaid, and outstanding?
+🔹 Customer Demographics
+1. What is the distribution of borrowers by age, gender, and employment status?
 
-What percentage of loans are in default, active, or fully paid?
+2. How does income level relate to loan performance and default rates?
 
-How does loan performance vary by region and branch?
+3. Are certain age groups more likely to default?
 
-2. Customer Demographics
+🔹 Branch-Level Insights
+1. Which branches have the highest outstanding balances or default rates?
 
-What is the distribution of borrowers by age, gender, and employment status?
+2. How do average interest rates vary across branches or regions?
 
-How does income relate to loan performance (e.g., default rates)?
+🔹 Loan Segmentation
+1. What characteristics (age, income, employment status) are associated with:
 
-Are younger or older customers more likely to default?
+   Fully repaid loans?
 
-3. Branch-Level Insights
+   Defaulted loans?
 
-Which branches have the highest outstanding balances or default rates?
+2. Can we identify clusters of high-risk vs low-risk customers?
 
-How does the average interest rate differ across branches or regions?
+🔹 Predictive Metrics
+1. Can we engineer features like payment behavior or risk level?
 
-4. Loan Segmentation
-
-What are the common characteristics (age, income, employment) of customers with:
-
-Fully repaid loans?
-
-Defaulted loans?
-
-Can we identify clusters of high-risk vs low-risk customers?
-
-Predictive Metrics
-
-Can we engineer features like payment behavior or risk level?
-
-What customer profiles are likely to require intervention?
+2. Which customer profiles are likely to need intervention or support?
 
 
-
-### DATA DICTIONARY
-#### Fact Table: fact_loan
-This table holds transactional and performance data about each loan.
-
-Column Name	Description
-LoanID	         Unique identifier for each loan record.
-CustomerID	Foreign key linking to dim_customer, identifies the borrower.
-BranchID	Foreign key linking to dim_branch, shows where the loan was processed.
-LoanAmount	Original principal amount of the loan.
-InterestRate	Interest rate applied to the loan (could be monthly or annual).
-Term	Duration of the loan (e.g., in months).
-StartDate	Date when the loan started.
-EndDate	Expected maturity or payoff date.
-Status	Current status of the loan – likely values include: Active, Fully Paid, Defaulted.
-AmountPaid	Total amount paid by the customer till date (interest + principal).
-OutstandingBalance	Remaining unpaid loan balance (principal + interest).
-
-
-### Dimension Table: dim_branch
-This provides branch-level metadata for grouping loans regionally.
-
-Column Name	Description
-BranchID	Unique identifier for each branch (joins with fact_loan).
-BranchName	Name of the bank branch.
-City	City where the branch is located.
-Region	Region (e.g., North, South, Central) — useful for regional insights.
-
-### Dimension Table: dim_customer
-This gives demographic and economic context about the borrowers.
-
-Column Name	Description
-CustomerID	Unique identifier for each customer (joins with fact_loan).
-Name	Customer's full name (not always needed in analysis).
-Age	Age of the customer.
-Gender	Gender (e.g., Male, Female).
-Income	Annual income of the customer.
-EmploymentStatus	e.g., Employed, Self-Employed, Unemployed, Retired, Student, etc.
-
-### Date Table
-To support time-based analysis and trends
-
-Sample Columns	Description
-Date	The actual date.
-Year	Year part.
-Month	Month name or number.
-Quarter	Quarter (Q1 to Q4).
-Weekday	Day of week, for behavioral analysis.
 

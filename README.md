@@ -55,6 +55,11 @@ This project enables decision-makers in financial institutions to:
    Fully repaid loans?
 
 
+### DATA CLEANING
+
+
+
+
 ### Dataset Overview
 The analysis is based on a star schema consisting of the following tables:
 

@@ -54,6 +54,20 @@ This project enables decision-makers in financial institutions to:
 
    Fully repaid loans?
 
+
+### Dataset Overview
+The analysis is based on a star schema consisting of the following tables:
+
+1. fact_loan: Core transactional data for loans (Loan ID, Customer ID, Loan Amount, Term, Start/End Dates, Payment Status).
+
+2. dim_customer: Contains customer demographic and financial attributes (Age, Gender, Income, Employment Status).
+
+3. dim_branch: Provides metadata about loan branches (City, Region).
+
+4. date_table: Supports time-based analysis.
+
+
+
    Defaulted loans?
 
 

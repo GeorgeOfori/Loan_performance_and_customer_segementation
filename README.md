@@ -61,10 +61,13 @@ This project enables decision-makers in financial institutions to:
 ## Exploratory Data Analysis(EDA) and Data Cleaning 
  The data cleaning include: check structure, removed duplicates, and handled missing values.
  
- The Exploratory Data Analysis(EDA) includes:
- 1. Loan Status Distribution
+ The Exploratory Data Analysis(EDA) includes
 
-    ![Loan Status Distribution](Images/Loan_status_distribution.png)
+
+    
+
+
+   ![Loan Status Distribution](Images/Loan_status_distribution.png)
 
  #### Key insights
  1. Paid Loans Dominate: The most frequent status is "Paid", indicating a relatively strong repayment culture or successful underwriting processes. This is a good sign for overall loan portfolio health.
@@ -73,7 +76,6 @@ This project enables decision-makers in financial institutions to:
  4. In Progress Loans: The mid-sized bar for "In Progress" shows an active set of loans currently in repayment or early stages. Timely engagement and support could reduce the chance of future defaults.
 
 
-2. Age vs Outstanding Balance
 
      ![Age vs Outstanding Balance](Images/Age_vs_outstanding_balance.png)
 
@@ -84,7 +86,6 @@ This project enables decision-makers in financial institutions to:
  3. Approved loans also appear across the board, but many still show relatively high outstanding balances suggesting early-stage repayment or potential risk zones.
 
 
-3. Loan Status by Gender
 
      ![Loan Status by Gender](Images/Loan_status_by_gender.png)
 
@@ -95,7 +96,6 @@ This project enables decision-makers in financial institutions to:
  3. Default rates are comparable, though slightly higher in males, suggesting a potential area for gender-focused risk assessment.
  4. The number of approved and in-progress loans are relatively similar across genders, indicating fair approval practices and engagement.
 
-4. Distribution of Loan Amounts
 
 
     ![Distribution of Loan Amounts](Images/Distribution_of_loan_amounts.png)

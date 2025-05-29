@@ -155,6 +155,9 @@ The analysis is based on a star schema consisting of the following tables:
 
    ![Customer segmentation & Risk](Images/Customer_segementation_&_risk.png)
 
+
+
+
      
 #### Regional Performance Analysis
 
@@ -163,4 +166,32 @@ The analysis is based on a star schema consisting of the following tables:
 
  ![Regional Performance Analysis](Images/Regional_performance_analysis.png)
 
-    
+
+
+
+### CALCULATED COLUMNS & MEASURES
+   #### Calculated Columns (Power BI DAX)
+   
+1. Loan Tenure (Months)
+  LoanTenureMonths = DATEDIFF(fact_loan[StartDate], fact_loan[EndDate], MONTH)
+
+2. Payment Ratio
+   PaymentRatio = DIVIDE(fact_loan[AmountPaid], fact_loan[LoanAmount])
+
+3. IsDefault = IF(fact_loan[Status] = "Defaulted", 1, 0)
+
+  ####  DAX Measures
+1. Total Loans
+   TotalLoans = COUNT(fact_loan[LoanID])
+
+2. Total Loan Amount
+   TotalLoanAmount = SUM(fact_loan[LoanAmount])
+
+3. Outstanding Balance
+   TotalOutstanding = SUM(fact_loan[OutstandingBalance])
+
+4. Average Interest Rate 
+   AverageInterestRate = AVERAGE(fact_loan[InterestRate])
+
+5. Default Rate
+   DefaultRate = DIVIDE(SUM(fact_loan[IsDefault]), COUNT(fact_loan[LoanID]))

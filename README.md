@@ -30,31 +30,13 @@ This project enables decision-makers in financial institutions to:
 5. Optimize strategies for marketing, risk management, and loan recovery
 
 ### Business Questions
- Loan Performance
-1. What is the total loan amount disbursed, repaid, and outstanding?
-   
-2. What percentage of loans are active, defaulted, or fully paid?
+1. Which customer segments contribute most to loan disbursement and default?
 
-3. How does loan performance differ across regions and branches?
+2. What are the risk patterns across demographics and employment types?
 
- Customer Demographics
-1. What is the distribution of borrowers by age, gender, and employment status?
+3. How do regional branches compare in terms of loan portfolio performance?
 
-2. How does income level relate to loan performance and default rates?
-
-3. Are certain age groups more likely to default?
-
- Branch-Level Insights
-1. Which branches have the highest outstanding balances or default rates?
-
-2. How do average interest rates vary across branches or regions?
-
- Loan Segmentation
-1. What characteristics (age, income, employment status) are associated with:
-
-   Fully repaid loans?
-
-   Defaulted loans?
+4. What operational or policy strategies can optimize loan recovery and profitability?
 
 
 
@@ -71,8 +53,10 @@ This project enables decision-makers in financial institutions to:
 
  #### Key insights
  1. Paid Loans Dominate: The most frequent status is "Paid", indicating a relatively strong repayment culture or successful underwriting processes. This is a good sign for overall loan portfolio health.
- 2. Significant Approved Loans: A high number of loans are in the "Approved" category. This suggests an active pipeline and potential for future earnings, but also underlines the importance of close monitoring to ensure conversion to repayment.
- 3. Default Rate Noticeable: The "Defaulted" loans, although smaller in count, are significant enough to warrant attention. This group presents a clear risk and should be examined for shared traits (e.g., demographics, income level, loan size).
+ 2. Significant Approved Loans: A high number of loans are in the "Approved" category. This suggests an active pipeline and potential for future earnings, but also underlines the importance of close monitoring 
+    to ensure conversion to repayment.
+ 3. Default Rate Noticeable: The "Defaulted" loans, although smaller in count, are significant enough to warrant attention. This group presents a clear risk and should be examined for shared traits (e.g., 
+    demographics, income level, loan size).
  4. In Progress Loans: The mid-sized bar for "In Progress" shows an active set of loans currently in repayment or early stages. Timely engagement and support could reduce the chance of future defaults.
 
 
@@ -156,15 +140,43 @@ The analysis is based on a star schema consisting of the following tables:
    ![Customer segmentation & Risk](Images/Customer_segementation_&_risk.png)
 
 
+#### Key insights:
+1. Male customers account for $1.61M (55.23%) in loans.Female customers account for $1.31M (44.77%). This suggests a slightly higher loan uptake by males.
+2. Highest outstanding balance by employment status: Retired: $386.55K (31.58%) Followed by Employed, Unemployed, and Self-Employed. Default rate is highest among: Unemployed (0.17) and Employed (0.15). Lower 
+   for Self-Employed (0.05) and Retired (0.03).
+3. Defaults and approved loans are spread across all age groups, but younger and middle-aged clients (20–50) show more activity.
 
 
-     
 #### Regional Performance Analysis
 
 
     
 
  ![Regional Performance Analysis](Images/Regional_performance_analysis.png)
+
+#### Key insights:
+
+1. Top 3 regions by total loan amount: Delaware ($3.34M), Montana ($3.12M),Idaho ($2.92M). Regions with highest default rates: Maine (0.16) and Texas (0.15). Lowest performing region in payment ratio: Maine 
+   (32.57)  Delaware and Montana are performing well with high disbursements and moderate default rates.
+2. Highest average interest rate: Wisconsin (9.6%), followed by Mississippi (9.1%) and Lowest is Florida (8.8%)
+
+
+
+## Final Recommendations
+
+1. Implement Data-Driven Risk Scoring. Develop a robust credit risk model. Assign risk-weighted interest rates and loan limits, for instance higher rates for unemployed borrowers or regions with historical 
+   defaults.
+   
+2. Optimize Regional Branch Strategy by scalling up lending operations in Delaware, Montana, and Idaho, where loan performance is stable. Also, reassess underwriting policies in Maine and Texas, potentially 
+   reduce disbursements or tighten approval thresholds. Invest in staff training and automated underwriting tools in underperforming branches.
+  
+3. Targeted Product Design by introducing a senior-focused loan products (e.g., pension-backed loans), given retirees’ high balances and low default risk. Also offer microloans or emergency credit lines with 
+   stricter monitoring for high-risk groups (unemployed, early-career professionals).
+  
+4. Proactive Loan Monitoring should be establised to determine early warning systems to flag borrowers with poor repayment behavior. Branches exceeding default risk thresholds. Also launch automated reminders, 
+   credit counseling, and loan restructuring programs before defaults spike.
+
+5. Periodic Portfolio Review by conducting quarterly portfolio health checks by region, age group, and risk tier.
 
 
 
